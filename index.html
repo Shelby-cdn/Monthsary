@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff7197" />
+    <meta name="description" content="A small interactive love letter." />
+    <title>A Little Something for You 💌</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="experience" aria-live="polite">
+      <div class="hearts" aria-hidden="true"></div>
+
+      <section class="screen is-active" id="day-screen" aria-labelledby="day-heading">
+        <div class="card intro-card">
+          <span class="eyebrow">A tiny question</span>
+          <div class="heart-icon" aria-hidden="true">♥</div>
+          <h1 id="day-heading">Do you know what day it is today?</h1>
+          <p class="hint">Choose carefully, sweetheart.</p>
+          <div class="button-row">
+            <button class="button button-primary" id="day-yes" type="button">Yes, of course! ♡</button>
+            <button class="button button-secondary" id="day-no" type="button">Umm… no?</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="love-screen" aria-labelledby="love-heading" hidden>
+        <div class="card question-card">
+          <div class="bunny" aria-hidden="true">ʕ•́ᴥ•̀ʔっ♡</div>
+          <h1 id="love-heading">I love you so much!<br />Do you also love me?</h1>
+          <p class="hint">There is only one right answer…</p>
+          <div class="choice-zone" id="choice-zone">
+            <button class="button button-primary" id="love-yes" type="button">Yes! I do! 💗</button>
+            <button class="button button-no" id="love-no" type="button">No</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen" id="transition-screen" aria-labelledby="transition-heading" hidden>
+        <div class="card transition-card">
+          <div class="celebration" aria-hidden="true">✦ ♡ ✦</div>
+          <h1 id="transition-heading">I knew it! 🥰</h1>
+          <p class="big-copy">I love you too!<br />Don’t go yet…</p>
+          <button class="button button-primary pulse" id="uwu-button" type="button">Click me UWU ✨</button>
+        </div>
+      </section>
+
+      <section class="screen finale" id="finale-screen" aria-labelledby="finale-heading" hidden>
+        <div class="flower-garden" id="flower-garden" aria-hidden="true"></div>
+        <article class="letter-card">
+          <span class="eyebrow">For my favorite person</span>
+          <h1 id="finale-heading">You make every day brighter.</h1>
+          <p>
+            Thank you for being my safe place, my biggest smile, and my favorite adventure.
+            I’m so lucky to have you. Here’s to more little moments, big dreams, and all the love in between.
+          </p>
+          <p class="signature">Always yours, <span>♥</span></p>
+        </article>
+      </section>
+    </main>
+
+    <div class="modal" id="forgot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+      <div class="modal-panel">
+        <button class="close-button" id="close-modal" type="button" aria-label="Close">×</button>
+        <img class="crying-cat" src="https://raw.githubusercontent.com/byquangthanh/valentine.github.io/main/cat.gif" alt="A crying cat" />
+        <h2 id="modal-title">You forgot?! 😿</h2>
+        <p>It’s okay—there’s still time to save this.</p>
+        <button class="button button-primary" id="recover-button" type="button">Just kidding, I remember! ❤️</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
